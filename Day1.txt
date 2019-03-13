@@ -44,3 +44,12 @@ Stride: the number of pixels to slide the kernel (filter) across the image.
 Downsampling: The act of reducing the size of an image
 
 I have created CNN classification model on Fasion MNIST Dataset got 89% predicion accuracy.
+
+Day3:
+
+watched videos of TensorFlow devsummit 19
+
+Day 4:
+
+Learn some interesting concepts in numpy lib
+
