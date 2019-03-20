@@ -1,0 +1,30 @@
+Day1: 21st March 2019
+
+I learn that we can make OCR based model for single line of text using Keras and TensorFlow.
+
+*Conectionist Temporal Classification (CTC) Loss function : Applied to identified word by removing
+    words and white spaces
+
+We can make OCR based model for entire text consist of multiple line, for that we need to do some Preprossessing
+
+DIA(Document Image Analysis): 
+                            1. Image Segmentation
+                            2. word Extraction
+                            3. Text Recongnition using OCR 
+                            4. Error reduction of words using Language model or Dictionary APIs
+
+3. Text Recongnition using OCR :
+    2 methods:
+        1. LSTM
+        2. Uniform Segmentation
+
+findContours function of opencv
+
+Line Normalization using 'ocrolib':
+    'https://github.com/tmbdev/ocropy/blob/master/doc/line-normalization.ipynb'
+
+*To avoid network overfitting we stopped the training process several times and 
+continued training the network with the new dataset
+
+Resources:
+'https://dzone.com/articles/using-ocr-for-receipt-recognition';
