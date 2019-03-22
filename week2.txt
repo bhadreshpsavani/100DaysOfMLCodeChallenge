@@ -28,3 +28,12 @@ continued training the network with the new dataset
 
 Resources:
 'https://dzone.com/articles/using-ocr-for-receipt-recognition';
+
+Day2: 22 march 2019
+
+started Watching videos related to using python for AI.
+
+wanted to learn libraries like 1. numpy: for array manipulation
+                               2. Pandas: data Manipulation and Analysis
+                               3. scikit: data Visulization
+                               4. python: facebook lib for deep learning
