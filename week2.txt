@@ -37,3 +37,9 @@ wanted to learn libraries like 1. numpy: for array manipulation
                                2. Pandas: data Manipulation and Analysis
                                3. scikit: data Visulization
                                4. python: facebook lib for deep learning
+                               
+Day3: 24-03-2019
+
+Pandas: 
+- Dataframe is a heterogeneous object and hence are able to store different datatypes together
+
