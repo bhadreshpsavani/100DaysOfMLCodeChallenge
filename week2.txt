@@ -43,3 +43,21 @@ Day3: 24-03-2019
 Pandas: 
 - Dataframe is a heterogeneous object and hence are able to store different datatypes together
 
+Day6: 27-03-2019
+
+supervised learning: the user provides the algorithm with pairs of inputs and desired outputs,
+and the algorithm finds a way to produce the desired output given an input
+
+unsupervised learning:
+only the input data is known, and no known output data is given to the algorithm
+
+feature extraction or feature engineering: building a good representation of your data
+
+k-Nearest Neighbors Algorithm:
+
+- To make a prediction for a new data point, the algorithm finds the point in the training set that is closest to the new point 
+- The k in k-nearest neighbors signifies that instead of using only the closest neighbor to the new data point, we can consider any fixed number k of neighbors in the training.
+
+*  scikit-learn always expects two-dimensional arrays for the data. 
+
+-  The fit, predict, and score methods are the common interface to supervised models in scikit-learn
