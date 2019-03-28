@@ -61,3 +61,42 @@ k-Nearest Neighbors Algorithm:
 *  scikit-learn always expects two-dimensional arrays for the data. 
 
 -  The fit, predict, and score methods are the common interface to supervised models in scikit-learn
+
+Day7: 28 Mar 2019
+
+- Datasets that are included in scikit-learn are usually stored as Bunch objects, which contain some information about the dataset
+as well as the actual data. All you need to know about Bunch objects is that they behave like dictionaries, with the added benefit that you can access values using a dot
+
+-feature engineering on boston dataset we can get more feature by doing product of normal features.
+
+-  The test set accuracy for using a single neighbor is lower than when using more neighbors, indicating that using the single nearest neighbor leads to a model that is too complex. On the other hand, when considering 10 neighbors, the model is too simple and performance is even worse. The best performance is somewhere in the middle, using around six neighbors
+
+* while the nearest k-neighbors algorithm is easy to understand, it is not often used
+in practice, due to prediction being slow and its inability to handle many features.
+
+You might notice the strange-looking trailing underscore at the end of coef_ and intercept_. scikit-learn always stores anything
+that is derived from the training data in attributes that end with a trailing underscore. That is to separate them from parameters that
+are set by the user
+
+*****************Regression Problems*****************
+
+1. Linear Regression
+2. Ridge Regression (uses L2 Regularization)
+3. Lasso Regression (uses L1 Regularization)
+
+Linear Regression: 
+
+If more data is added, it becomes harder for a model to overfit, or memorize the data. 
+
+** We also want the magnitude of coefficients to be as small as possible; in other words, all entries of w should be close to
+zero. Intuitively, this means each feature should have as little effect on the outcome as possible (which translates to having a small slope), while still predicting well. This constraint is an example of what is called regularization. 
+
+-"Regularization means explicitly restricting a model to avoid overfitting". 
+
+With linear regression, we were overfitting our data. Ridge is a more restricted model, so we are less likely to overfit
+
+we are only interested in generalization performance, we should choose the Ridge model over the LinearRegression model.
+
+* plots that show model performance as a function of dataset size are called learning curves
+
+The consequence of L1 regularization is that when using the lasso, some coefficients are exactly zero
