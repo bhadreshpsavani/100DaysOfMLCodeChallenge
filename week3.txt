@@ -1,0 +1,6 @@
+Day1: 29 mar 2019
+
+Binary Classifier for multiclass problem,
+
+To make a prediction, all binary classifiers are run on a test point. The classifier that has the highest score on its
+single class “wins,” and this class label is returned as the prediction.
