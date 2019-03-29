@@ -4,3 +4,31 @@ Binary Classifier for multiclass problem,
 
 To make a prediction, all binary classifiers are run on a test point. The classifier that has the highest score on its
 single class “wins,” and this class label is returned as the prediction.
+
+Decision Tree:
+
+Random Forest: uses two algorithms to make each tree different from each other
+        1. Bootstrap sampling
+        2. feature selection
+        
+Critical feature in random forest:
+
+  max_feature parameter: a high max_features means that the trees in the random forest will be quite similar, and they will be
+                able to fit the data easily, using the most distinctive features.
+                
+                         A low max_features means that the trees in the random forest will be quite different, and that each tree
+                might need to be very deep in order to fit the data well.
+
+n_estimators: Higher is better
+
+it’s a good rule of thumb to use the default values:  max_features=sqrt(n_features)  for classification and 
+                                                      max_features=log2(n_features) for regression
+
+To make a prediction using the random forest, the algorithm first makes a prediction for every tree in the forest. For regression, we can average these results to get our final prediction. For classification, a “soft voting” strategy is used. This means each algorithm makes a  “soft” prediction, providing a probability for each possible output
+
+Gradient boosted regression trees (gradient boosting machines): 1. learning_rate
+                                                                2. n_estimartors
+                                                    
+                                                    
+Support Vector Machines:
+
