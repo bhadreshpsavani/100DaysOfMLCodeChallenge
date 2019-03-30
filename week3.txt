@@ -30,5 +30,46 @@ Gradient boosted regression trees (gradient boosting machines): 1. learning_rate
                                                                 2. n_estimartors
                                                     
                                                     
-Support Vector Machines:
+Support Vector Machines: 
 
+Day2: 30 Mar 2019
+
+Deep Learning:
+
+MultiLayerPerceptons(MLP): After computing a weighted sum for each hidden unit, a nonlinear function is applied to the result—usually the rectifying nonlinearity (also known as rectified linear unit or relu) or the tangens hyperbolicus (tanh)
+
+* The relu cuts off values below zero,
+* tanh saturates to –1 for low input values and +1 for high input values.
+
+        it have regularization parameter alpha if it is higher then model is more general and if low then model is complex or overfitting
+        
+- Neural networks—particularly the large and powerful ones—often take a long time to train. 
+- They also require careful preprocessing of the data.
+- Similarly to SVMs, they work best with “homogeneous” data, where all the features have similar meanings. 
+- For data that has very different kinds of features, tree-based models might work better. 
+
+* fit Resets a Model: 
+An important property of scikit-learn models is that calling fit will always reset everything a model previously learned. So if you
+build a model on one dataset, and then call fit again on a different dataset, the model will “forget” everything it learned from the first dataset.
+
+There is also the question of how to learn the model, or the algorithm that is used for learning the parameters, which is set using the algorithm parameter: Default Adam, l-bfgs, sgd
+
+scikit-learn has ability of classifiers to provide uncertainty estimates of predictions.
+
+scikit-learn that can be used to obtain uncertainty estimates from classifiers: decision_function and predict_proba
+
+predict_proba and decision_function always have shape (n_samples, n_classes)—apart from decision_function in the special binary case. In the binary case, decision_function only has one column, corresponding to the “positive” class classes_[1]
+
+************************Which Algorithm Should We use***********************
+
+Nearest neighbors: For small datasets, good as a baseline, easy to explain.
+
+Linear models: Go-to as a first algorithm to try, good for very large datasets, good for very highdimensional data.
+
+Naive Bayes: Only for classification. Even faster than linear models, good for very large datasets and high-dimensional data. Often less accurate than linear models.
+
+Decision trees: Very fast, don’t need scaling of the data, can be visualized and easily explained.
+
+Random forests: Nearly always perform better than a single decision tree, very robust and powerful. Don’t need scaling of data. Not good for very high-dimensional sparse data.
+
+Gradient boosted decision trees: Often slightly more accurate than random forests. Slower to train but faster to predict than random forests, and smaller in memory. Need more parameter tun‐ing than random forests.
