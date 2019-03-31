@@ -73,3 +73,25 @@ Decision trees: Very fast, don’t need scaling of the data, can be visualized a
 Random forests: Nearly always perform better than a single decision tree, very robust and powerful. Don’t need scaling of data. Not good for very high-dimensional sparse data.
 
 Gradient boosted decision trees: Often slightly more accurate than random forests. Slower to train but faster to predict than random forests, and smaller in memory. Need more parameter tun‐ing than random forests.
+
+**********************Unsupervised Learning**********************************
+
+Unsupervised transformations of a dataset are algorithms that create a new representation of the data which might be easier for humans or other machine learning algorithms to understand compared to the original representation of the data.
+
+Different Scaler for Preprocessing:
+        1. StandardScaler,
+        2. RobustScaler,
+        3. MinMaxScaler,
+        4. Normalizer
+   
+Other Preprocessing Algorithms:
+        1. Principal Component Analysis (PCA),
+        2. Non-negative Matrix Factorization (NMF),
+        3. t-SNE.
+
+Principal component analysis is a method that rotates the dataset in a way such that the rotated features are statistically uncorrelated. Using PCA, we can capture the main interactions and get a slightly more complete picture. We can find the first two principal components, and visualize the data in this new two-dimensional space with a single scatter plot. The principal components correspond to directions in the original data, so they are combinations of the original features.
+
+non-negative matrix factorization (NMF), which is commonly used for feature extraction, 
+
+t-SNE, which is commonly used for visualization using two-dimensional scatter plots.
+
