@@ -94,6 +94,8 @@ Principal component analysis is a method that rotates the dataset in a way such 
 non-negative matrix factorization (NMF), which is commonly used for feature extraction, 
 
 t-SNE, which is commonly used for visualization using two-dimensional scatter plots.
+
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 Day3: 2 April 2019
@@ -114,3 +116,29 @@ Stratified k-Fold Cross-Validation:In stratified cross-validation, we split the 
 It is usually a good idea to use stratified k-fold cross-validation instead of k-fold cross-validation to evaluate a classifier, because it results in more reliable estimates of generalization performance. 
 
 regression, scikit-learn uses the standard k-fold cross-validation by default.
+
+Leave-one-out cross-validation: This can be very time consuming, particularly for large datasets, but sometimes provides better esti‐
+mates on small datasets:
+
+shuffle-split cross-validation: allows for control over the number of iterations independently of the training and test sizes.
+StratifiedShuffleSplit cross-validation
+
+Cross-validation with groups:The groups array here indicates groups in the data that should not be split when creating the training and testsets, and should not be confused with the class label
+
+
+*******************************Grid Search*******************************
+
+we have three sets: 
+1. the training set to build the model, 
+2. the validation (or development) set to select the parameters of the model, and 
+3. the test set to evaluate the performance of the selected parameters
+
+After selecting the best parameters using the validation set, we can rebuild a model using the parameter settings we found, but now training on both the training data and the validation data
+
+scikit-learn provides the GridSearchCV class, which implements it in the form of an estimator
+
+grid_search.cv_results_ : Detailed parameters
+grid_search.best_estimator_ : best parameters trained
+
+cross_val_score, GridSearchCV uses stratified k-fold cross-validation
+by default for classification, and k-fold cross-validation for regression.
