@@ -94,4 +94,23 @@ Principal component analysis is a method that rotates the dataset in a way such 
 non-negative matrix factorization (NMF), which is commonly used for feature extraction, 
 
 t-SNE, which is commonly used for visualization using two-dimensional scatter plots.
+----------------------------------------------------------------------------------------------------------------------------------------
 
+Day3: 2 April 2019
+
+-------------------------------------------------Model Evaluation and Improvement------------------------------------------------------
+
+Cross-validation is a statistical method of evaluating generalization performance that is more stable and thorough than using a split into a training and a test set
+
+"It is important to keep in mind that cross-validation is not a way to build a model that can be applied to new data. Cross-validation
+does not return a model. When calling cross_val_score, multiple models are built internally, but the purpose of cross-validation is
+only to evaluate how well a given algorithm will generalize when trained on a specific dataset."
+
+k-fold cross-validation:
+The main disadvantage of cross-validation is increased computational cost
+
+Stratified k-Fold Cross-Validation:In stratified cross-validation, we split the data such that the proportions between classes are the same in each fold as they are in the whole dataset
+
+It is usually a good idea to use stratified k-fold cross-validation instead of k-fold cross-validation to evaluate a classifier, because it results in more reliable estimates of generalization performance. 
+
+regression, scikit-learn uses the standard k-fold cross-validation by default.
