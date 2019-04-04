@@ -91,9 +91,14 @@ Other Preprocessing Algorithms:
 
 Principal component analysis is a method that rotates the dataset in a way such that the rotated features are statistically uncorrelated. Using PCA, we can capture the main interactions and get a slightly more complete picture. We can find the first two principal components, and visualize the data in this new two-dimensional space with a single scatter plot. The principal components correspond to directions in the original data, so they are combinations of the original features.
 
-non-negative matrix factorization (NMF), which is commonly used for feature extraction, 
+PCA can be used for feature extraction of images. PCA finds the optimum directions in terms of reconstruction.
 
-t-SNE, which is commonly used for visualization using two-dimensional scatter plots.
+non-negative matrix factorization (NMF), which is commonly used for feature extraction, feature extraction we want both the components and the coefficients to be greater than or equal to zero
+NMF is usually not used for its ability to reconstruct or encode data, but rather for finding interesting patterns within the data.
+
+manifold learning algorithms: class of algorithms for visualization
+
+t-SNE, which is commonly used for visualization using two-dimensional scatter plots. The idea behind t-SNE is to find a two-dimensional representation of the data that preserves the distances between points as best as possible.
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -142,3 +147,20 @@ grid_search.best_estimator_ : best parameters trained
 
 cross_val_score, GridSearchCV uses stratified k-fold cross-validation
 by default for classification, and k-fold cross-validation for regression.
+
+Day4: 4th April 2019
+
+One hot encoding: most common way to represent categorical variables is using the one-hotencoding or one-out-of-N encoding, also known as dummy variables
+
+------------------------------------Clustering -----------------------------------------
+
+clustering is the task of partitioning the dataset into groups, called clusters. The goal is to split up the data in such a way that points within a single cluster are very similar and points in different clusters are different. 
+
+Clustering Algorithms:
+1. Kmeans,
+2. Agglomerative,
+3. DBSCAN(Density Based Spatial Clustring Application with Noise)
+
+
+#counts How often each target appearce
+count= np.bincount(people.target)
