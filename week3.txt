@@ -164,3 +164,10 @@ Clustering Algorithms:
 
 #counts How often each target appearce
 count= np.bincount(people.target)
+
+Day5: 5th April 2019
+
+pipeline: could build a pipeline containing feature extraction, feature selection, scaling, and classification, for a total
+of four steps.
+
+RandomForestClassifier: no preprocessing is necessary. 
