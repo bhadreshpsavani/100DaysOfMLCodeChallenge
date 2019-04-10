@@ -172,7 +172,19 @@ of four steps.
 
 RandomForestClassifier: no preprocessing is necessary. 
 
-Day6: 10th April 2019
+Day 6: 8th April 2019
+
+The key principles of that difference between LinearSVC and SVC are the following:
+
+* By default scaling, LinearSVC minimizes the squared hinge loss while SVC minimizes the regular hinge loss. It is possible to manually define a 'hinge' string for loss parameter in LinearSVC.
+
+* LinearSVC uses the One-vs-All (also known as One-vs-Rest) multiclass reduction while SVC uses the One-vs-One multiclass reduction. It is also noted here. Also, for multi-class classification problem SVC fits N * (N - 1) / 2 models where N is the amount of classes. LinearSVC, by contrast, simply fits N models. If the classification problem is binary, then only one model is fit in both scenarios. multi_class and decision_function_shape parameters have nothing in common. The second one is an aggregator that transforms the results of the decision function in a convenient shape of (n_features, n_samples). multi_class is an algorithmic approach to establish a solution.
+
+* The underlying estimators for LinearSVC are liblinear, that do in fact penalize the intercept. SVC uses libsvm estimators that do not. liblinear estimators are optimized for a linear (special) case and thus converge faster on big amounts of data than libsvm. That is why LinearSVC takes less time to solve the problem.
+
+-- Decision Tree, Random Forest, Gradient Boosted Tree Algorithm is inverient to scaling.
+
+Day7: 10th April 2019
 
 K - Fold Implimentation logic for NN:
 
