@@ -5,4 +5,19 @@ Day2 : 15th April 2019
 - matplotlib.image is used for image related operations
 
 
+Day3: 16th April 2019
 
+Canny Edge Detection algorithm
+- edges = cv2.Canny(gray, low_threshold, high_threshold)
+The John Canny recommended low_threshold to high_threshold ratio to be 1:2, 1:3
+
+
+Hough Transformation: 
+- a line in image space corresponds to a point in Hough space, A point in image space describes a line in Hough space
+
+- Two points in image space correspond to two lines in Hough Space. Not only that, but these lines must intersect
+
+we have two intersecting lines in Hough Space. How would you represent their intersection at the point (m0, b0) in image space?
+- The intersection point at (m0, b0) represents the line y = m0x + b0 in image space and it must be the line that passes through both points!
+
+lines=cv2.HoughLinesP(masked_edges, rho, theta, threshold, np.array([]),min_line_length,max_line_gap)
