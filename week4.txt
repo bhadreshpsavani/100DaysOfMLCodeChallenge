@@ -48,3 +48,37 @@ cv2.calibrateCamera() : It returns the camera matrix, distortion coefficients, r
 ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1],None,None)
 
 cv2.undistort() : dst = cv2.undistort(img, mtx, dist, None, mtx)
+
+Day5: 24th April 2019
+
+Calculating Lane Curvature : 
+
+Self-driving cars need to be told the correct steering angle to turn, left or right. You can calculate this angle if you know a few things about the speed and dynamics of the car and how much the lane is curving.
+
+One way to calculate the curvature of a lane line, is to fit a 2nd degree polynomial to that line, and from this you can easily extract useful information.
+
+For a lane line that is close to vertical, you can fit a line using this formula: f(y) = Ay^2 + By + C, where A, B, and C are coefficients.
+
+A gives you the curvature of the lane line, B gives you the heading or direction that the line is pointing, and C gives you the position of the line based on how far away it is from the very left of an image (y = 0).
+
+Perspective transform
+
+A perspective transform maps the points in a given image to different, desired, image points with a new perspective. The perspective transform you’ll be most interested in is a bird’s-eye view transform that let’s us view a lane from above; this will be useful for calculating the lane curvature later on. Aside from creating a bird’s eye view representation of an image, a perspective transform can also be used for all kinds of different view points.
+
+- Four Points are enough to define linear tranformation from one prospective to another.
+
+Compute the perspective transform, M, given source and destination points:
+M = cv2.getPerspectiveTransform(src, dst)
+
+Compute the inverse perspective transform:
+Minv = cv2.getPerspectiveTransform(dst, src)
+
+Warp an image using the perspective transform, M:
+warped = cv2.warpPerspective(img, M, img_size, flags=cv2.INTER_LINEAR)
+
+Camera Calibration: To compute Transformatuon Between 3D object points in  the world and 2D image points.
+
+Distortion Correction: To ensure that geometric shape of object is represented  consistently, no matter where they appear in the image.
+
+Prespective Transformation: To transform an image such that we are affectively viewing object from a different angle or direction.
+
