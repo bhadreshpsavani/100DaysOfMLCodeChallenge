@@ -82,3 +82,18 @@ Distortion Correction: To ensure that geometric shape of object is represented  
 
 Prespective Transformation: To transform an image such that we are affectively viewing object from a different angle or direction.
 
+Day6: 25th April 2019
+Sobels Filter in x and y direction:
+    sobelx = cv2.Sobel(gray, cv2.CV_64F, 1, 0)
+    sobely = cv2.Sobel(gray, cv2.CV_64F, 0, 1)
+
+Take the absolute value of the derivative or gradient
+    abs_sobelx = np.absolute(sobelx)
+
+Convert the absolute value image to 8-bit:
+    scaled_sobel = np.uint8(255*abs_sobelx/np.max(abs_sobelx))
+
+Note: It's not entirely necessary to convert to 8-bit (range from 0 to 255) but in practice, it can be useful in the event that you've written a function to apply a particular threshold, and you want it to work the same on input images of different scales, like jpg vs. png. You could just as well choose a different standard range of values, like 0 to 1 etc.
+
+The direction of the gradient is simply the inverse tangent (arctangent) of the yy gradient divided by the xx gradient:
+arctan(sobel_y/sobel_x)
