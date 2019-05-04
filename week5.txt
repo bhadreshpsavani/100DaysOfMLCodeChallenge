@@ -20,3 +20,11 @@ The activation function that decides the actual output, we often refer to the ou
 Then the neural network starts to learn! Initially, the weights and bias are assigned a random value, and then they are updated using 
 a learning algorithm like gradient descent.
 
+Maximum Likelihood: Maximize the total probability
+
+Cross Entropy: sum of negative of logarithm of probabilities. This Negative of logarithm indicates error.
+good model - low cross entropy - high product of probability
+bad model - high cross entropy - low product of probability
+Goal - Maximizing probalities - Minimizing crossentropy
+
+Percepton algorithm and Gradient Decenet Algorithm
