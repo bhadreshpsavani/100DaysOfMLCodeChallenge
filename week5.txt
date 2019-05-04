@@ -1,0 +1,22 @@
+Day1: 4th May 2019 
+
+Linear regression helps predict values on a continuous spectrum, like predicting what the price of a house will be.
+
+Classification problems are important for self-driving cars. Self-driving cars might need to classify 
+whether an object crossing the road is a car, pedestrian, and a bicycle. 
+Or they might need to identify which type of traffic sign is coming up, or what a stop light is indicating.
+
+Data, like test scores and grades, are fed into a network of interconnected nodes. These individual nodes are called perceptrons, 
+or artificial neurons, and they are the basic unit of a neural network. Each one looks at input data and decides how to categorize 
+that data
+	
+When input comes into a perceptron, it gets multiplied by a weight value that is assigned to this particular 
+	
+Each input to a perceptron has an associated weight that represents its importance. These weights are determined during the learning 
+process of a neural network, called training.
+	
+The activation function that decides the actual output, we often refer to the outputs of a layer as its "activations".
+
+Then the neural network starts to learn! Initially, the weights and bias are assigned a random value, and then they are updated using 
+a learning algorithm like gradient descent.
+
