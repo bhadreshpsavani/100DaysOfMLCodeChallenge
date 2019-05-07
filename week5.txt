@@ -89,3 +89,19 @@ tf.nn.softmax(tensor)
 
 Multinominal Logistic Classification
 
+Day3: 7th May 2019
+
+ # Turn labels into numbers and apply One-Hot Encoding
+    from sklearn.preprocessing import LabelBinarizer
+    encoder = LabelBinarizer()
+    encoder.fit(train_labels)
+    train_labels = encoder.transform(train_labels)
+    test_labels = encoder.transform(test_labels)
+    
+# TODO: Set the features and labels tensors
+features = tf.placeholder(tf.float32, [None, features_count])
+labels = tf.placeholder(tf.float32, [None, labels_count]) 
+
+# TODO: Set the weights and biases tensors
+weights = tf.Variable(tf.random_normal([features_count, labels_count]))
+bias = tf.Variable(tf.random_normal([labels_count]))
