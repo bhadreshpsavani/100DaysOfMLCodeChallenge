@@ -105,3 +105,14 @@ labels = tf.placeholder(tf.float32, [None, labels_count])
 # TODO: Set the weights and biases tensors
 weights = tf.Variable(tf.random_normal([features_count, labels_count]))
 bias = tf.Variable(tf.random_normal([labels_count]))
+
+Day4: 8th May 2018
+
+The tf.nn.dropout() function takes in two parameters:
+
+	hidden_layer: the tensor to which you would like to apply dropout
+	keep_prob: the probability of keeping (i.e. not dropping) any given unit
+	
+During training, a good starting value for keep_prob is 0.5.
+
+During testing and Validation, use a keep_prob value of 1.0 to keep all units and maximize the power of the model.
