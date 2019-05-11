@@ -116,3 +116,20 @@ The tf.nn.dropout() function takes in two parameters:
 During training, a good starting value for keep_prob is 0.5.
 
 During testing and Validation, use a keep_prob value of 1.0 to keep all units and maximize the power of the model.
+
+Day5: 10th May 2019
+
+In python, In for loop if we want to iterate list with keeping track of index we use: enumerate() in for loop
+
+Day6: 11th May 2019
+
+Embedding Layer: 
+The Embedding layer takes as input a 2D tensor of integers, of shape (samples, sequence_length),
+This layer returns a 3D floating-point tensor of shape (samples, sequence_length, embedding_dimensionality)
+ex. model.add(Embedding(10000, 8, input_length=maxlen)) 
+here, number of most commen words: 10000, embedding_dimensionality: 8
+Note: This layer don't consider inter word relationship.
+
+Pretrained WordEmbedding:
+Word2vec dimensions capture specific semantic properties, such as gender
+GloVe
