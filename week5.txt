@@ -133,3 +133,11 @@ Note: This layer don't consider inter word relationship.
 Pretrained WordEmbedding:
 Word2vec dimensions capture specific semantic properties, such as gender
 GloVe
+
+Day7: 12th May 2019
+
+Keras has image preprocessing module in which we use ImageDataGenerator class to get images 
+we can get it in many way like,
+datagen.flow(x_train, y_train, batch_size=32) # if we have data in the form of x_train, y_train
+train_datagen.flow_from_directory('data/train', target_size=(150, 150), batch_size=32, class_mode='binary') #when data is stored in 														     specific lib
+
