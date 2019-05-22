@@ -1,0 +1,27 @@
+Day1: 22-05-2019 : Self Driving Car Python notes
+
+A generator is like a coroutine, a process that can run separately from another main routine, which makes it a useful Python function. 
+Instead of using return, the generator uses yield, which still returns the desired output values but saves the current values of all 
+the generator's variables. When the generator is called a second time it re-starts right after the yield statement, with all its variables 
+set to the same values as before.
+
+That's quite new
+
+Fibonacci Generator code:
+
+def fibonacci():
+    numbers_list = []
+    while 1:
+        if(len(numbers_list) < 2):
+            numbers_list.append(1)
+        else:
+            numbers_list.append(numbers_list[-1] + numbers_list[-2])
+        yield numbers_list # change this line so it yields its list instead of 1
+
+our_generator = fibonacci()
+my_output = []
+
+for i in range(10):
+    my_output = (next(our_generator))
+    
+print(my_output)
